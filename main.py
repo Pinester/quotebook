@@ -21,6 +21,22 @@ def home():
     get_db()
     return render_template("home.html")
 
+# Viewing a page of someones' quotes
+@app.route("/quotes/<int:person_id>", methods=["GET"])
+def quotes(person_id):
+    # gets data of all quotes from person_id in the api
+    conn = get_db()
+    cursor = conn.cursor()
+    cursor.execute('''SELECT name FROM Person WHERE id = ?''', (person_id,))
+    name = cursor.fetchone()
+    cursor.execute('''SELECT description FROM Person WHERE id = ?''', (person_id,))
+    descrip = cursor.fetchone()
+    cursor.execute('''SELECT text FROM Quote WHERE person_id = ?''',
+                   (person_id,))
+    quote_text = cursor.fetchall()
+    return render_template("quotes.html",
+                           name=name[0], quote_text=quote_text, 
+                           descrip=descrip[0])
 
 # This is just error 404
 @app.errorhandler(404)
