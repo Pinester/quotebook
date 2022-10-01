@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<h1>{{name}}</h1>
-<h2>{{descrip}}</h2>
-{% for quote in quote_text %}
-  <p>{{quote[0]}}</p> 
-{%endfor%}
+  {%extends "layout.html"%}
+  {%block content%}
+<body>
+  <h1>{{name}}</h1>
+  <h3>{{descrip}}</h3>
+  {% for quote in quote_text %}
+    <p>{{quote[0]}}</p> 
+  {%endfor%}
+</body>
+{%endblock%}
