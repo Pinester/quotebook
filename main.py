@@ -29,13 +29,15 @@ def quotes(person_id):
     cursor = conn.cursor()
     cursor.execute('''SELECT name FROM Person WHERE id = ?''', (person_id,))
     name = cursor.fetchone()
+    cursor.execute('''SELECT image_string FROM Person WHERE id = ?''', (person_id,))
+    image = cursor.fetchone()
     cursor.execute('''SELECT description FROM Person WHERE id = ?''', (person_id,))
     descrip = cursor.fetchone()
     cursor.execute('''SELECT text FROM Quote WHERE person_id = ?''',
                    (person_id,))
     quote_text = cursor.fetchall()
     return render_template("quotes.html",
-                           name=name[0], quote_text=quote_text, 
+                           name=name[0], image=image, quote_text=quote_text, 
                            descrip=descrip[0])
 
 # This is just error 404
