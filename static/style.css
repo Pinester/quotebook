@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Lexend Deca';
-    src: url(/LexendDecaRegular.ttf);
+    src:
+        url("/static/fonts/LexendDecaRegular.ttf")
 }
 
 body { 
@@ -27,6 +28,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
 h1, h2, h3, h4, p, a
