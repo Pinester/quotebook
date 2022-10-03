@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url(./LexendDecaRegular.ttf);
+}
+
 body { 
 background-color: #030613;
 font-family: "Lexend Deca";
