@@ -4,13 +4,15 @@
 <body>
   <div class="box topbox">
     <img src={{image[0]}}>
-  <div clas="boxtext text">
-    <h1>{{name}}</h1>
-    <p>{{descrip}}</p>
+    <div class="boxtext text">
+      <h1>{{name}}</h1>
+      <p>{{descrip}}</p>
+    </div>
   </div>
- </div>
   {% for quote in quote_text %}
+  <div class="box">
     <p>{{quote[0]}}</p> 
+  </div>
   {%endfor%}
 </body>
 {%endblock%}

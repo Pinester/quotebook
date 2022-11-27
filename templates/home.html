@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html>
-{%extends "layout.html"%} 
+{%extends "layout.html"%}
 {%block content%}
-    <body>
-      <div class="box topbox" id='dfs'>
-        <a href="/quotes/1"><img src="./static/image/dunford.twitch.tv.png"> </a>
-        <div class="boxtext text">
-            <h1>Dunford</h1>
-            <p>Tall Kratos Viking Man. His natural habitat is that of X7 and D16, though it could be argued that it's 
-              actually the canteen instead. The only predictable thing about him is how unpredictable his responses can be. 
-              This leads to some funny quotes.
-            </p>
-        </div>
+
+<body>
+  <div class="box topbox" id='dfs'>
+    <a href="/quotes/1"><img id = "img-1" src="./static/image/dunford.twitch.tv.png"> </a>
+    <div class="boxtext text">
+      <h1><a href="/quotes/1">Dunford</a></h1>
+      <p>Tall Kratos Viking Man. His natural habitat is that of X7 and D16, though it could be argued that it's
+        actually the canteen instead. The only predictable thing about him is how unpredictable his responses can be.
+        This leads to some funny quotes.
+      </p>
     </div>
-    <div class="box topbox" id='cfa'>
-      <a href="/quotes/2"><img src="./static/image/alex.png"></a>
-      <div class="boxtext text">
-          <h1>Cutforth</h1>
-          <p>Interesting Brit with a distinct (lack of) charm. Can usually be found in X8 or with the herd of Magnum Voce 
-            or Quantum Acoustics. Occupies a black hole in his stomach and insists that Rust is the best programming language. 
-          </p>
-      </div>
+  </div>
+  <div class="box topbox" id='cfa'>
+    <a href="/quotes/2"><img id = "img-1" src="./static/image/alex.png"></a>
+    <div class="boxtext text">
+      <h1><a href="/quotes/2">Cutforth</a></h1>
+      <p>Interesting Brit with a distinct (lack of) charm. Can usually be found in X8 or with the herd of Magnum Voce
+        or Quantum Acoustics. Occupies a black hole in his stomach and insists that Rust is the best programming
+        language.
+      </p>
+    </div>
   </div>
   <div class="box topbox" id='tnz'>
-    <a href="/quotes/3"><img src="./static/image/tan.png"></a>
+    <a href="/quotes/3"><img id = "img-1" src="./static/image/tan.png"></a>
     <div class="boxtext text">
-        <h1>Tang</h1>
-        <p>Physics teacher with the fashion sense of a character in American Psycho. Resides in upstairs I Block or 
-          J Block during lunches. Has the snarkiness and violent tendencies of a NYC gangster, and may have been 
-          involved in a pyramid scheme.
-        </p>
+      <h1><a href="/quotes/3">Tang</a></h1>
+      <p>Physics teacher with the fashion sense of a character in American Psycho. Resides in upstairs I Block or
+        J Block during lunches. Has the snarkiness and violent tendencies of a NYC gangster, and may have been
+        involved in a pyramid scheme.
+      </p>
     </div>
-</div>
-    </body>
+  </div>
+</body>
 {%endblock%}
+
 </html>
