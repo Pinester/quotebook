@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{%extends "layout.html"%}
+{%block content%}
+<div class="box">
+<div class="centre-text"> <h1>LOG IN</h1> </div>
+</div>
+<hr>
+<form method="post">
+<label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required maxlength="25" minlength="5">
+   <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required maxlength="50" minlength="3">
+<button type="submit" class="loginbutton">Log In</button>
+</form>
+<a href="signup">SIGNUP</a>
+<p>{{error}}</p>
+{%endblock%}

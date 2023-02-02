@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+{%extends "layout.html"%}
+{%block content%}
+<div class="box"> <h1>Submit a Quote</h1> </div>
+<p>When you submit a quote, you must wait for an admin account to approve it before it gets publicly shown on the website.</p>
+<p>Please use proper punctuation and grammar, unless the actual quote itself was spoken with broken grammar.</p>
+<p>Thank you for submitting and keeping this website alive!</p>
+<form method="post">
+    <label for="username"><b>Quote</b></label>
+          <input type="text" placeholder="Enter Quote" name="quotetext" required minlength="5">
+       <label for="password"><b>Quotee</b></label>
+       <select name="quoteperson" required>
+        <option value="">--Select Quotee--</option>
+        <option value="dfs">Dunford</option>
+        <option value="cta">Cutforth</option>
+        <option value="tnz">Tang</option>
+        <option value="ric">Risbridger</option>
+      </select>
+    <button type="submit" class="submitbutton">Submit Quote</button>
+    </form>
+{%endblock%}

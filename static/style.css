@@ -21,10 +21,10 @@ color: white
 header {
     background-color:rgb(10, 25, 40, 0.5);
     text-align: left;
-    position: fixed;
+    /*position: fixed;*/
     width: 100vw;  
     top: 0;
-    backdrop-filter: blur(6px);
+   /* backdrop-filter: blur(6px);*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,14 +68,6 @@ img {
     transition: transform .2s;
 }
 
-img {
-    width: 20vw;
-    height: 20vw;   
-    border-radius: 1.5vw;
-    margin-right: 2vw;
-    transition: transform .2s;
-}
-
 #img-1:hover{
     transform: scale(1.1);
 }
@@ -84,6 +76,9 @@ h1 {
     font-size: 3vw;
 }
 
+.centre-text {
+    text-align: center;
+}
 
 h3 {
     font-size: 1.5vw;

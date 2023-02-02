@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+  {%extends "layout.html"%}
+  {%block content%}
+<body>
+    <div class="box">
+    <h1> SIGN UP </h1>
+    </div>
+    <div class="box">
+    <hr>
+    <form method="post">
+    <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required>
+       <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+    <button type="submit" class="signupbutton">Sign Up</button>
+    </form>
+    <a href="login">Already have an account? Log in here.</a>
+    <p> {{error}}</p>
+    </div>
+    {%endblock%}
+

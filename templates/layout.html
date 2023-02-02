@@ -9,7 +9,12 @@
   <header>
     <h2 id="home"><a id="Home" href="/">Home</a></h2>
     <h1 id="quote">QUOTEBOOK</h1>
-    <p id="acc-icon">ICON</p>
+    {% if session.get("is_logged_in", False) %}
+    <h2 id="logout"><a href="/logout">Logout</a></h2>
+  {% else %}
+  <h2 id="signup"><a href="/signup">Sign Up</a></h2>
+  <h2 id="login"> <a href="/login">Login</a></h2>
+  {% endif %}
     </div>
   </header>
   {%block content%} {%endblock%}
